@@ -1,0 +1,34 @@
+version: 0.2
+
+phases:
+
+  install:
+    runtime-versions:
+      python: 3.11
+
+    commands:
+      - echo "Installing project dependencies"
+      - python --version
+      - pip --version
+      - pip install -r requirements.txt
+
+  pre_build:
+    commands:
+      - echo "Starting Intelligent Test Selection and Prioritization"
+      - echo "Preparing DCATP pipeline"
+
+  build:
+    commands:
+      - echo "Running intelligent test prioritization"
+      - python run_pipeline.py
+
+  post_build:
+    commands:
+      - echo "DCATP pipeline execution completed"
+      - echo "Generating project results"
+
+artifacts:
+  files:
+    - "results/**/*"
+    - "data/test_history.json"
+  discard-paths: no

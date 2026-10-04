@@ -1,0 +1,26 @@
+{
+    "tests/test_auth.py": [
+        "app/auth.py"
+    ],
+    "tests/test_user.py": [
+        "app/user.py"
+    ],
+    "tests/test_product.py": [
+        "app/product.py"
+    ],
+    "tests/test_inventory.py": [
+        "app/inventory.py"
+    ],
+    "tests/test_cart.py": [
+        "app/cart.py"
+    ],
+    "tests/test_order.py": [
+        "app/order.py"
+    ],
+    "tests/test_payment.py": [
+        "app/payment.py"
+    ],
+    "tests/test_notification.py": [
+        "app/notification.py"
+    ]
+}

@@ -1,0 +1,42 @@
+name: Intelligent Test Prioritization CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+
+  test-and-prioritize:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python --version
+          pip --version
+          pip install -r requirements.txt
+
+      - name: Run complete test suite
+        run: |
+          python -m pytest -q
+
+      - name: Run intelligent test prioritization
+        run: |
+          python run_pipeline.py
+
+      - name: Upload pipeline results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dcatp-pipeline-results
+          path: results/
