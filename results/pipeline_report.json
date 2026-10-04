@@ -2,7 +2,9 @@
   "project": "Intelligent Test Selection and Prioritization",
   "method": "DCATP",
   "formula": "0.5*Code Relevance + 0.3*Failure Probability + 0.2*Execution Efficiency",
-  "changed_files": [],
+  "changed_files": [
+    "app/payment.py"
+  ],
   "all_tests": [
     "tests/test_auth.py",
     "tests/test_cart.py",
@@ -14,126 +16,35 @@
     "tests/test_user.py"
   ],
   "selected_tests": [
-    "tests/test_auth.py",
-    "tests/test_cart.py",
-    "tests/test_inventory.py",
-    "tests/test_notification.py",
-    "tests/test_order.py",
-    "tests/test_payment.py",
-    "tests/test_product.py",
-    "tests/test_user.py"
+    "tests/test_payment.py"
   ],
   "dcatp_ranking": [
     {
-      "test": "tests/test_auth.py",
-      "code_relevance": 0.0,
-      "failure_probability": 0.0,
-      "execution_efficiency": 1.0,
-      "priority_score": 0.2
-    },
-    {
-      "test": "tests/test_cart.py",
-      "code_relevance": 0.0,
-      "failure_probability": 0.0,
-      "execution_efficiency": 1.0,
-      "priority_score": 0.2
-    },
-    {
-      "test": "tests/test_inventory.py",
-      "code_relevance": 0.0,
-      "failure_probability": 0.0,
-      "execution_efficiency": 1.0,
-      "priority_score": 0.2
-    },
-    {
-      "test": "tests/test_notification.py",
-      "code_relevance": 0.0,
-      "failure_probability": 0.0,
-      "execution_efficiency": 1.0,
-      "priority_score": 0.2
-    },
-    {
-      "test": "tests/test_order.py",
-      "code_relevance": 0.0,
-      "failure_probability": 0.0,
-      "execution_efficiency": 1.0,
-      "priority_score": 0.2
-    },
-    {
       "test": "tests/test_payment.py",
-      "code_relevance": 0.0,
+      "code_relevance": 1.0,
       "failure_probability": 0.0,
       "execution_efficiency": 1.0,
-      "priority_score": 0.2
-    },
-    {
-      "test": "tests/test_product.py",
-      "code_relevance": 0.0,
-      "failure_probability": 0.0,
-      "execution_efficiency": 1.0,
-      "priority_score": 0.2
-    },
-    {
-      "test": "tests/test_user.py",
-      "code_relevance": 0.0,
-      "failure_probability": 0.0,
-      "execution_efficiency": 1.0,
-      "priority_score": 0.2
+      "priority_score": 0.7
     }
   ],
   "test_results": [
     {
-      "test": "tests/test_auth.py",
-      "status": "PASSED",
-      "execution_time": 0.007
-    },
-    {
-      "test": "tests/test_cart.py",
-      "status": "PASSED",
-      "execution_time": 0.003
-    },
-    {
-      "test": "tests/test_inventory.py",
-      "status": "PASSED",
-      "execution_time": 0.004
-    },
-    {
-      "test": "tests/test_notification.py",
-      "status": "PASSED",
-      "execution_time": 0.003
-    },
-    {
-      "test": "tests/test_order.py",
-      "status": "PASSED",
-      "execution_time": 0.003
-    },
-    {
       "test": "tests/test_payment.py",
       "status": "PASSED",
-      "execution_time": 0.005
-    },
-    {
-      "test": "tests/test_product.py",
-      "status": "PASSED",
-      "execution_time": 0.004
-    },
-    {
-      "test": "tests/test_user.py",
-      "status": "PASSED",
-      "execution_time": 0.004
+      "execution_time": 0.006
     }
   ],
   "evaluation": {
     "full_suite_passed": true,
     "full_suite_test_count": 8,
-    "selected_test_count": 8,
+    "selected_test_count": 1,
     "full_suite_failed_tests": 0,
     "full_suite_passed_tests": 30,
-    "test_reduction_percent": 0.0,
-    "full_suite_test_execution_time": 0.031,
-    "selected_suite_test_execution_time": 0.033,
-    "test_execution_time_saving_percent": -6.45,
-    "full_suite_wall_clock_time": 0.94,
-    "resource_usage_proxy_reduction_percent": 0.0
+    "test_reduction_percent": 87.5,
+    "full_suite_test_execution_time": 0.032,
+    "selected_suite_test_execution_time": 0.006,
+    "test_execution_time_saving_percent": 81.25,
+    "full_suite_wall_clock_time": 1.0873,
+    "resource_usage_proxy_reduction_percent": 87.5
   }
 }

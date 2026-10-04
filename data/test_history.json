@@ -36,9 +36,9 @@
     "last_result": "passed"
   },
   "tests/test_payment.py": {
-    "total_runs": 1,
+    "total_runs": 2,
     "failures": 0,
-    "average_execution_time": 0.005,
+    "average_execution_time": 0.0055,
     "last_result": "passed"
   },
   "tests/test_notification.py": {
