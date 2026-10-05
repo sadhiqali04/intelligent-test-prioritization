@@ -3,9 +3,9 @@
     {
       "test": "tests/test_payment.py",
       "status": "PASSED",
-      "execution_time": 0.005
+      "execution_time": 0.006
     }
   ],
-  "wall_clock_time": 0.7665,
+  "wall_clock_time": 0.7812,
   "pytest_return_code": 0
 }

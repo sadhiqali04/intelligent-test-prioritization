@@ -22,16 +22,16 @@
     {
       "test": "tests/test_payment.py",
       "code_relevance": 1.0,
-      "failure_probability": 0.1667,
+      "failure_probability": 0.125,
       "execution_efficiency": 1.0,
-      "priority_score": 0.75
+      "priority_score": 0.7375
     }
   ],
   "test_results": [
     {
       "test": "tests/test_payment.py",
       "status": "PASSED",
-      "execution_time": 0.005
+      "execution_time": 0.006
     }
   ],
   "evaluation": {
@@ -42,9 +42,9 @@
     "full_suite_passed_tests": 30,
     "test_reduction_percent": 87.5,
     "full_suite_test_execution_time": 0.031,
-    "selected_suite_test_execution_time": 0.005,
-    "test_execution_time_saving_percent": 83.87,
-    "full_suite_wall_clock_time": 0.975,
+    "selected_suite_test_execution_time": 0.006,
+    "test_execution_time_saving_percent": 80.65,
+    "full_suite_wall_clock_time": 1.0162,
     "resource_usage_proxy_reduction_percent": 87.5
   }
 }
