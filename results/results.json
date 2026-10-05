@@ -1,14 +1,9 @@
 {
   "results": [
     {
-      "test": "tests/test_cart.py",
-      "status": "PASSED",
-      "execution_time": 0.004
-    },
-    {
       "test": "tests/test_notification.py",
       "status": "PASSED",
-      "execution_time": 0.003
+      "execution_time": 0.007
     },
     {
       "test": "tests/test_order.py",
@@ -16,9 +11,9 @@
       "execution_time": 0.003
     },
     {
-      "test": "tests/test_inventory.py",
+      "test": "tests/test_cart.py",
       "status": "PASSED",
-      "execution_time": 0.005
+      "execution_time": 0.003
     },
     {
       "test": "tests/test_product.py",
@@ -31,8 +26,13 @@
       "execution_time": 0.004
     },
     {
-      "test": "tests/test_payment.py",
+      "test": "tests/test_inventory.py",
       "status": "PASSED",
+      "execution_time": 0.004
+    },
+    {
+      "test": "tests/test_payment.py",
+      "status": "FAILED",
       "execution_time": 0.005
     },
     {
@@ -41,6 +41,6 @@
       "execution_time": 0.004
     }
   ],
-  "wall_clock_time": 1.1232,
-  "pytest_return_code": 0
+  "wall_clock_time": 1.1461,
+  "pytest_return_code": 1
 }
