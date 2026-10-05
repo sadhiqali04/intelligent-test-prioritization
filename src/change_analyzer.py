@@ -24,39 +24,42 @@ def run_git_command(command):
     return []
 
 
+def filter_source_files(files):
+    ignored_files = [
+        "data/",
+        "results/",
+        "__pycache__/",
+        ".pyc"
+    ]
+
+    filtered = []
+
+    for file in files:
+        file = file.strip().replace("\\", "/")
+
+        if any(
+            ignored in file
+            for ignored in ignored_files
+        ):
+            continue
+
+        if file.startswith("app/") and file.endswith(".py"):
+            filtered.append(file)
+
+    return sorted(set(filtered))
+
+
 def get_changed_files():
 
-    # Used by CI/CD when the changed files
-    # are explicitly provided.
-    ci_changed_files = os.getenv(
-        "CHANGED_FILES"
-    )
+    # Used by CI/CD when changed files are explicitly provided.
+    ci_changed_files = os.getenv("CHANGED_FILES")
 
     if ci_changed_files:
-
-        return sorted(
-            set(
-                file.strip().replace("\\", "/")
-                for file in ci_changed_files.split(",")
-                if file.strip()
-            )
+        return filter_source_files(
+            ci_changed_files.split(",")
         )
 
-    # Compare current commit with previous commit.
-    changed = run_git_command(
-        [
-            "git",
-            "diff",
-            "--name-only",
-            "HEAD^",
-            "HEAD"
-        ]
-    )
-
-    if changed:
-        return changed
-
-    # Check local unstaged changes.
+    # First check local unstaged changes.
     changed = run_git_command(
         [
             "git",
@@ -64,6 +67,8 @@ def get_changed_files():
             "--name-only"
         ]
     )
+
+    changed = filter_source_files(changed)
 
     if changed:
         return changed
@@ -78,4 +83,20 @@ def get_changed_files():
         ]
     )
 
-    return changed
+    changed = filter_source_files(changed)
+
+    if changed:
+        return changed
+
+    # In CI/CD, compare the current commit with previous commit.
+    changed = run_git_command(
+        [
+            "git",
+            "diff",
+            "--name-only",
+            "HEAD^",
+            "HEAD"
+        ]
+    )
+
+    return filter_source_files(changed)

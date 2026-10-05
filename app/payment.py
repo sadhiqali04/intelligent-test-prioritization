@@ -9,7 +9,7 @@ def process_payment(amount):
     if amount <= 0:
         return False
 
-    return amount > 0
+    return amount >= 1
 
 
 def refund_payment(amount):

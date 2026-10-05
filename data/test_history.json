@@ -1,50 +1,50 @@
 {
   "tests/test_auth.py": {
-    "total_runs": 3,
+    "total_runs": 5,
     "failures": 0,
-    "average_execution_time": 0.005,
+    "average_execution_time": 0.0046,
     "last_result": "passed"
   },
   "tests/test_user.py": {
-    "total_runs": 3,
+    "total_runs": 5,
     "failures": 0,
     "average_execution_time": 0.004,
     "last_result": "passed"
   },
   "tests/test_product.py": {
-    "total_runs": 3,
+    "total_runs": 5,
     "failures": 0,
     "average_execution_time": 0.004,
     "last_result": "passed"
   },
   "tests/test_inventory.py": {
-    "total_runs": 3,
+    "total_runs": 5,
     "failures": 0,
-    "average_execution_time": 0.0043,
+    "average_execution_time": 0.0042,
     "last_result": "passed"
   },
   "tests/test_cart.py": {
-    "total_runs": 3,
+    "total_runs": 5,
     "failures": 0,
-    "average_execution_time": 0.0033,
+    "average_execution_time": 0.0034,
     "last_result": "passed"
   },
   "tests/test_order.py": {
-    "total_runs": 3,
+    "total_runs": 5,
     "failures": 0,
-    "average_execution_time": 0.003,
+    "average_execution_time": 0.0032,
     "last_result": "passed"
   },
   "tests/test_payment.py": {
-    "total_runs": 4,
+    "total_runs": 7,
     "failures": 1,
     "average_execution_time": 0.0052,
-    "last_result": "failed"
+    "last_result": "passed"
   },
   "tests/test_notification.py": {
-    "total_runs": 3,
+    "total_runs": 5,
     "failures": 0,
-    "average_execution_time": 0.0043,
+    "average_execution_time": 0.0038,
     "last_result": "passed"
   }
 }
